@@ -1,0 +1,19 @@
+h1 {
+    font-size: 140px;
+    text-align: center;
+}
+
+select,
+button {
+    font-size: 70px;
+    border-radius: 10px;
+}
+
+p {
+    font-size: 40px;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
