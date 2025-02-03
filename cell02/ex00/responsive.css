@@ -1,0 +1,26 @@
+body{
+    width: 100%;
+}
+table {
+    width: 100%;
+}
+
+#left {
+    background-color: rgb(255, 0, 0);
+    width: 50%;
+    height: 300px;
+    font-size: 40px;
+    color: white;
+}
+#right {
+    background-color: rgb(0, 17, 255);
+    width: 50%;
+    height: 300px;
+    font-size: 40px;
+    color: white;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+}
