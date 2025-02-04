@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="backgroound.css">
+</head>
+<body>
+    <div class="colors" id="colors"><button onclick="change()">Click me!</button></div>
+    <script>
+        function change(){
+            const see = [
+                "gray", "red", "blue", "purple", "green", "yellow", "orange", "pink", 
+                "brown", "cyan", "magenta", "lime", "teal", "indigo", "violet", 
+                "olive", "maroon", "navy", "aqua", "fuchsia", "silver", "gold", 
+                "peach", "beige", "lavender"
+            ];
+            let colors = document.getElementById("colors");
+            colors.style.backgroundColor = see[Math.floor(Math.random()*see.length)];
+        }
+    </script>
+</body>
+</html>
