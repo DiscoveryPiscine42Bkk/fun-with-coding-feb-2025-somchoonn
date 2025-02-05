@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .balloon {
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="balloon" id="balloon" style="width: 200px; height: 200px;"></div>
+
+    <script>
+        let colors = ["red", "green", "blue"];
+        let index = 0;
+        let minSize = 200;
+        let maxSize = 420;
+
+        $(document).ready(function() {
+            $("#balloon").on("click", function() {
+                let curSize = parseInt($(this).css("width"));
+                if (curSize >= maxSize) {
+                    $(this).css({ width: minSize + "px", height: minSize + "px" });
+                } else {
+                    $(this).css({ width: (curSize + 10) + "px", height: (curSize + 10) + "px" });
+                    index = (index + 1) % colors.length;
+                    $(this).css("background-color", colors[index]);
+                }
+            });
+
+            $("#balloon").on("mouseleave", function() {
+                let curSize = parseInt($(this).css("width"));
+                if (curSize > minSize) {
+                    $(this).css({ width: (curSize - 5) + "px", height: (curSize - 5) + "px" });
+                    index = (index - 1 + colors.length) % colors.length;
+                    $(this).css("background-color", colors[index]);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
