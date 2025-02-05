@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="backgroound.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="colors" id="colors">
+        <button id="changeBtn">Click me!</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            const see = [
+                "gray", "red", "blue", "purple", "green", "yellow", "orange", "pink",
+                "brown", "cyan", "magenta", "lime", "teal", "indigo", "violet",
+                "olive", "maroon", "navy", "aqua", "fuchsia", "silver", "gold",
+                "peach", "beige", "lavender"
+            ];
+
+            function change() {
+                const randomColor = see[Math.floor(Math.random() * see.length)];
+                $("#colors").css("background-color", randomColor);
+            }
+
+
+            $("#changeBtn").click(change);
+        });
+    </script>
+</body>
+
+</html>
