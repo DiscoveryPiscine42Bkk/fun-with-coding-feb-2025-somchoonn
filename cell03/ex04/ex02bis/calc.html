@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <h1>Calculator</h1>
+
+  <input type="text" id="lOp" placeholder="number" />
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+  </select>
+  <input type="text" id="rOp" placeholder="number" />
+  <button id="calculate">Try Me!</button>
+
+  <script>
+    $(document).ready(function () {
+      $("#calculate").click(function () {
+        const lOp = parseInt($("#lOp").val());
+        const rOp = parseInt($("#rOp").val());
+        const operator = $("#operator").val();
+
+        if (isNaN(lOp) || isNaN(rOp) || lOp < 0 || rOp < 0) {
+          alert("Error :(");
+          return;
+        }
+
+        if ((operator === '/' || operator === '%') && rOp === 0) {
+          alert("It's over 9000!");
+          console.log("It's over 9000!");
+          return;
+        }
+
+        let result;
+        switch (operator) {
+          case "+":
+            result = lOp + rOp;
+            break;
+          case "-":
+            result = lOp - rOp;
+            break;
+          case "*":
+            result = lOp * rOp;
+            break;
+          case "/":
+            result = lOp / rOp;
+            break;
+          case "%":
+            result = lOp % rOp;
+            break;
+        }
+
+        alert("Result: " + result);
+        console.log("Result:", result);
+      });
+
+      setInterval(function () {
+        alert("Please, use me...");
+      }, 30000);
+    });
+  </script>
+</body>
+
+</html>
