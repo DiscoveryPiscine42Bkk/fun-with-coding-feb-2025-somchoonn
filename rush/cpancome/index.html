@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        section {
+            text-align: center;
+        }
+
+
+        nav {
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            transition: 0.3s;
+            background-color: #302e2e;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+
+        section {
+            text-align: center;
+        }
+
+        #about,
+        #showcase,
+        #contact {
+            background-color: #f9f9f9;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-content,
+        .show-content {
+            background: white;
+            padding: 40px;
+            width: 60%;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-content {
+            background: white;
+            padding: 100px;
+            width: 60%;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+        .profile-pic img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .info {
+            background-color: #fff3cd;
+            padding: 20px;
+            width: 80%;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 56px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        p,
+        ul {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li::before {
+            content: "x";
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .gallery-item img {
+            max-width: 80%;
+            border-radius: 8px;
+        }
+
+        .gallery {
+            display: grid;
+            gap: 30px;
+        }
+
+        h3 {
+            font-size: 30px;
+            color: #333;
+        }
+
+        .conImg {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .conImg img {
+            max-width: 50px;
+            margin: 30px;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .conImg img:hover {
+            transform: scale(1.2);
+        }
+
+        a img {
+            width: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#contact">Contact</a>
+        <a href="#back" id="back">Back <img src="back.png"></a>
+    </nav>
+
+    <section id="about">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <div class="profile-pic">
+                <img src="me.jpg">
+            </div>
+            <div class="info">
+                <p><strong>Name:</strong> Chanokchon Pancome</p>
+                <p><strong>Nickname:</strong> Somchoon</p>
+                <p><strong>Age:</strong> 19</p>
+                <p><strong>Education:</strong></p>
+                <ul>
+                    <li>Primary School: Nakprasith School</li>
+                    <li>Secondary School: Nakprasith School</li>
+                    <li>University: King Mongkut's Institute of Technology Ladkrabang</li>
+                </ul>
+                <p><strong>Hobbies:</strong></p>
+                <ul>
+                    <li>Watching movies</li>
+                    <li>Listening to music</li>
+                    <li>Playing football</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase">
+        <div class="show-content">
+            <h2>Showcase</h2>
+            <div class="info">
+                <p>
+                    Learned : Python,C,Java
+                </p>
+                <p>
+                    Learning : HTML, CSS, Javascripts, MySQL
+                </p>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <h3>Project 1</h3>
+                    <br>
+
+                    <img src="hotel.png" alt="Project 1">
+                    <br>
+                    <p>Hotel-Management [Java + MySQL]</p>
+                </div>
+                <div class="gallery-item">
+                    <h3>Project 2</h3>
+                    <br>
+                    <img src="web.png" alt="Project 2">
+                    <br>
+                    <p>Web-Cafe [HTML,CSS,Javascripts]</p>
+                </div>
+                <div class="gallery-item">
+                    <h3>Project 3</h3>
+                    <br>
+                    <img src="ardu.jpg" alt="Project 3">
+                    <br>
+                    <p>Light on with PIR [Arduino]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-content">
+            <h2>Contact</h2>
+            <div class="conImg">
+                <img src="ig.png" id="ig">
+                <img src="facebook.png" id="face">
+                <img src="line.png" id="line">
+                <img src="git.png" id="git">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $('#ig').click(function () {
+                window.open('https://www.instagram.com/_chanokchon/', '_blank');
+            });
+
+            $('#face').click(function () {
+                window.open('https://www.facebook.com/chanokchon.pancome/', '_blank');
+            });
+
+            $('#line').click(function () {
+                window.open('https://line.me/ti/p/ZCMWSh_tbi', '_blank');
+            });
+
+            $('#git').click(function () {
+                window.open('https://github.com/somchoonn', '_blank');
+            });
+            $('#back').click(function () {
+                window.location.href = '../firstpage.html';
+            });
+        });
+    </script>
+
+</body>
+
+</html>
